@@ -1,0 +1,61 @@
+<html>
+<head>
+	<title>animation</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="hero">
+	<div class="highway"></div>
+	
+<div class="thumb"></div>
+<div id="a">
+	<div class="car">
+	   <img src="car.png" id="myImg">
+	</div>
+	<div class="wheel">
+	  <img src="wheel.png" class="back-wheel">
+	 <img src="wheel.png" class="front-wheel">
+	</div>
+</div>
+<script>
+
+var elementStyle = document.getElementById("a").style;
+var num = 1;
+var str1;
+var str2;
+var res;
+var flag=1; 
+var img = document.getElementById("myImg");
+function Redirect() {
+               window.location="file:///C:/Users/Abhiman%20Gowda/Desktop/html/html%20animation/king.html";
+            }
+img.onclick = function()
+{
+setInterval(start,40);
+}
+function start(){
+(flag==1) ? move() : Redirect();
+}
+function move(){
+
+
+if((num++)<=62){
+str1= num.toString();
+str2 = "%";
+res = str1.concat(str2);
+elementStyle.position = "relative";
+elementStyle.top ="100%"
+elementStyle.left = res;
+flag=1;
+}
+else
+{
+flag=0;
+}
+
+}
+
+</script>
+
+</body>
+</html>

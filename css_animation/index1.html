@@ -1,0 +1,99 @@
+<html>
+<head>
+	<title>animation</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="hero">
+	<div class="highway"></div>
+	
+<div class="thumb"></div>
+<div id="a">
+	<div class="car">
+	   <img src="car.png" id="myImg">
+	</div>
+	<div class="wheel">
+	  <img src="wheel.png" class="back-wheel" id="wb">
+	 <img src="wheel.png" class="front-wheel" id="wf">
+	</div>
+</div>
+<script>
+
+var elementStyle = document.getElementById("a").style;
+var num = 1;
+var num1 = 0;
+var str1;
+var str2;
+var res;
+var flag=1;
+var flag1=1; 
+var img = document.getElementById("myImg");
+var bw= document.getElementById("wb");
+var fw = document.getElementById("wf");
+function Redirect() {
+               window.location="file:///C:/Users/Abhiman%20Gowda/Desktop/html/html%20animation/king.html";
+            }
+
+
+bw.onclick = function()
+{
+setInterval(start1,40);
+}
+
+fw.onclick = function()
+{
+setInterval(start,40);
+}
+
+
+function start(){
+(flag==1) ? move() : Redirect();
+}
+
+
+function start1(){
+(flag==1) ? move1() : Redirect();
+}
+
+
+function move(){
+
+
+if((num++)<=62){
+str1= num.toString();
+str2 = "%";
+res = str1.concat(str2);
+elementStyle.position = "relative";
+elementStyle.top ="100%"
+elementStyle.left = res;
+flag=1;
+}
+else
+{
+flag=0;
+}
+
+}
+function move1(){
+
+
+if((num1--)>=-62){
+str1= num1.toString();
+str2 = "%";
+res = str1.concat(str2);
+elementStyle.position = "relative";
+elementStyle.top ="100%"
+elementStyle.left = res;
+flag=1;
+}
+else
+{
+flag=0;
+}
+
+}
+
+</script>
+
+</body>
+</html>
